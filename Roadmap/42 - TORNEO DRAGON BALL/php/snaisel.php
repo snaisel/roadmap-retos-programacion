@@ -134,6 +134,8 @@ function turnoAtaque($i, $j)
 }
 function combate($i, $j)
 {
+    $i->salud=100;
+    $j->salud=100;
     while ($i->salud > 0 && $j->salud > 0) {
         $j->salud -= turnoAtaque($i, $j);
         if ($j->salud > 0) {
